@@ -1,3 +1,4 @@
+## Prof.: Le variabili globali andrebbero commentate per far capire a cosa servono
 width=500
 x=100
 y=120
@@ -9,7 +10,9 @@ punti1=0
 punti2=0
 aggpunti=10
 def setup():
+## Prof.: hai una variabile globale che si chiama width
     size(500,440)
+## Prof.: configurare lo sfondo in setup è inutile se lo rifai in draw
     background(0,0,255)
     stroke(0,255,0)
 def draw():
@@ -22,6 +25,7 @@ def draw():
     if x>=width or x<0:
         x2*= -1
     rect(lrect,height-25,80,25)
+## Prof.: Il calcolo sulla raccehtta superiore non è preciso
     if y+25>height-25 and x>=lrect and x<=lrect+80 :              #controlla se la pallina si trova all altezza della racchetta e compresa nella sua lunghezza
         y2*= -1                                                   #cambia la direzione decrementando la y
     rect(lrect2,0,80,25)
